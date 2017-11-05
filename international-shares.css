@@ -1,0 +1,553 @@
+html,
+    body {
+        height: 100%;
+    }
+    
+    body {
+        color: #333;
+        font-family: "UniversNextforMORNPCCnLt";
+        font-size: 14px;
+        position: relative;
+    }
+    
+    h1 {
+        font-family: "UniversNextforMORNPCCnBd";
+        font-size: 56px;
+        margin: 0 0 30px;
+    }
+    
+    h2 {
+        font-size: 28px;
+        margin-bottom: 18px;
+        margin-top: 0;
+    }
+    
+    h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+
+    h4 {
+    	font-family: "UniversNextforMORNPCCnBd";
+    	font-size: 15px;
+    	margin-bottom: 5px;
+    	margin-top: 0;
+    }
+    
+    header {
+        background-color: #fff;
+        padding: 1em 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 990;
+    }
+
+    /* Lity Customisations */
+
+    .lity.lity-opened.lity-inline,
+    .lity.lity-opened.lity-youtube {
+        z-index: 99999 !important;
+    }
+    
+    .lity-close {
+        z-index: 9994;
+        width: 35px;
+        height: 35px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        -webkit-appearance: none;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        padding: 0;
+        color: #fff !important;
+        font-style: normal;
+        font-size: 35px;
+        font-family: Arial, Baskerville, monospace;
+        line-height: 35px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+        border: 0;
+        background: none;
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    /* Responsive Tables */
+    
+    table {
+        border-bottom: solid 1px #adadad;
+    }
+    
+    tr {
+        border-top: solid 1px #adadad;
+    }
+    
+    th {
+        background-color: #eee;
+    }
+    
+    th,
+    td {
+        width: 25%;
+        font-size: 28px;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-right: 1em;
+        text-align: left;
+        line-height: 1.1;
+    }
+    /*
+	Max width before this PARTICULAR table gets nasty
+	This query will take effect for any screen smaller than 760px
+	and also iPads specifically.
+	*/
+    
+    @media only screen and (max-width: 760px),
+    (min-device-width: 768px) and (max-device-width: 1024px) {
+        /* Force table to not be like tables anymore */
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+        /* Hide table headers (but not display: none;, for accessibility) */
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        tr {
+            border: 1px solid #ccc;
+        }
+        td {
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+            padding-bottom: 10px;
+            width: 100%;
+            font-size: 14px;
+        }
+        td:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+        .resp-bold {
+            font-family: "UniversNextforMORNPCCnBd";
+        }
+        /*
+		Label the data
+		*/
+        td:nth-of-type(1):before {
+            content: "";
+        }
+        td:nth-of-type(2):before {
+            content: "What is this?";
+            font-family: "UniversNextforMORNPCCnBd";
+        }
+        td:nth-of-type(3):before {
+            content: "Morningstar";
+            font-family: "UniversNextforMORNPCCnBd";
+        }
+        td:nth-of-type(4):before {
+            content: "Average International Shares Fund";
+            font-family: "UniversNextforMORNPCCnBd";
+            white-space: pre-wrap;
+        }
+    }
+    
+    #banner {
+        position: relative;
+        background-image: url("http://images.mscomm.morningstar.com/EloquaImages/clients/MorningstarInc/{3196adb9-f255-4fc2-aaad-e41af4ca2b70}_hero-img.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        color: #fff;
+    }
+    
+    #howcanwehelp {
+        background-color: #e5efef;
+        width: 100%;
+        zpadding: 5em 0;
+    }
+    
+    #ourinvestmentprinciples,
+    #aboutmorningstar {
+        width: 100%;
+        zpadding: 5em 0;
+    }
+    
+    #feesandperformance {
+        background-color: #f4f4f4;
+        width: 100%;
+        padding: 5em 0;
+    }
+    
+    #feesandperformance ol {
+        padding-left: 10px;
+    }
+    
+    #feesandperformance li {
+        font-size: 11px;
+        text-align: left;
+        color: #333 !important;
+    }
+    
+    #compareanddiversify {
+        position: relative;
+        background-image: url("http://images.mscomm.morningstar.com/EloquaImages/clients/MorningstarInc/%7B7c5e4e17-cc20-459b-8a13-af0e155904dd%7D_silhouette1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        color: #333;
+        padding: 5em 0;
+    }
+    
+    #compareanddiversify ol {
+        padding-left: 18px;
+    }
+    
+    #compareanddiversify li,
+    #compareanddiversify p {
+        font-size: 20px;
+        text-align: left;
+        color: #333 !important;
+    }
+    
+    #accessyourmoney {
+        width: 100%;
+    }
+    
+    #meetthemanagers {
+        position: relative;
+        background-image: url("http://images.mscomm.morningstar.com/EloquaImages/clients/MorningstarInc/%7Be46625b2-cf16-4a56-a62b-7cb0ea9fb525%7D_silhouette2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        color: #333;
+        padding: 5em 0;
+    }
+    
+    #meetthemanagers img {
+        width: 100% !important;
+    }
+    
+    #vid-1-cont,
+    #vid-2-cont,
+    #vid-3-cont,
+    #vid-4-cont,
+    #vid-5-cont,
+    #vid-6-cont {
+        padding: 1em;
+        background-color: #fff;
+        min-height: 15em;
+    }
+    
+    #vid-1-cont {
+        border-top: solid 3px #f00;
+        margin-bottom: 1em;
+    }
+    
+    #vid-2-cont {
+        border-top: solid 3px #9faa00;
+        margin-bottom: 1em;
+    }
+    
+    #vid-3-cont {
+        border-top: solid 3px #9b0033;
+    }
+    
+    #vid-4-cont {
+        border-top: solid 3px #00aeef;
+        margin-bottom: 1em;
+    }
+    
+    #vid-5-cont {
+        border-top: solid 3px #f7941d;
+        margin-bottom: 1em;
+    }
+    
+    #vid-6-cont {
+        border-top: solid 3px #92278f;
+    }
+    
+    .vid-container {
+        position: relative;
+    }
+    
+    .vid-container .play-icon {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    svg:hover #play-svg {
+        fill: #CC181E;
+    }
+    
+    #howdoiinvest {
+        position: relative;
+        background-image: url("http://images.mscomm.morningstar.com/EloquaImages/clients/MorningstarInc/imagethumbnails/%7B36938783-5af0-4721-ab87-4fb0771ef37b%7D_silhouette3.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        color: #333;
+        zpadding: 5em 0;
+    }
+    
+    #howdoiinvest a,
+    #insightsregister a,
+    #aboutmorningstar a {
+        color: #333;
+        text-decoration: underline;
+    }
+    
+    .invest-step-1,
+    .invest-step-2,
+    .invest-step-3,
+    .invest-step-4 {
+        font-family: "UniversNextforMORNPCCnBd";
+        background-color: #fff;
+        padding: 1em;
+        min-height: 15em;
+        margin-bottom: 1em;
+    }
+    
+    .invest-step-1 {
+        border-top: solid 3px #ff0000;
+        border-bottom: solid 3px #ff0000;
+    }
+    
+    .invest-step-2 {
+        border-top: solid 3px #9b0033;
+        border-bottom: solid 3px #9b0033;
+    }
+    
+    .invest-step-3 {
+        border-top: solid 3px #e96610;
+        border-bottom: solid 3px #e96610;
+    }
+    
+    .invest-step-4 {
+        border-top: solid 3px #9faa00;
+        border-bottom: solid 3px #9faa00;
+    }
+    
+    #insightsregister {
+        position: relative;
+        background-image: url("http://images.mscomm.morningstar.com/EloquaImages/clients/MorningstarInc/%7B7e58de1a-816f-49ea-b91f-9b9ea279a704%7D_silhouette4.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        color: #333;
+        padding: 5em 0;
+    }
+
+    #insightsconfirm {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #insightsreceive {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+    #disclaimer {
+    	background-color: #f9f9f9;
+    	color: #ff3333;
+    	width: 100%;
+        padding: 5em 0;
+    }
+
+    #disclaimer p {
+    	font-size: 11px;
+    }
+
+    #disclaimer a {
+    	color: #ff3333;
+    	text-decoration: underline;
+    }
+    
+    .vertical-center {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        /* align the inline(-block) elements horizontally */
+        font: 0/0 a;
+        /* remove the gap between inline(-block) elements */
+    }
+    
+    .vertical-center:before {
+        /* create a full-height inline block pseudo=element */
+        content: " ";
+        display: inline-block;
+        vertical-align: middle;
+        /* vertical alignment of the inline element */
+        height: 100%;
+    }
+    
+    .vertical-center > .banner-cont,
+    .vertical-center > .howcanwehelp-cont,
+    .vertical-center > .ourinvestmentprinciples-cont,
+    .vertical-center > .feesandperformance-cont,
+    .vertical-center > .accessyourmoney-cont,
+    .vertical-center > .howdoiinvest-cont,
+    .vertical-center > .aboutmorningstar-cont {
+        max-width: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        /* vertical alignment of the inline element */
+        font: 16px/1 "UniversNextforMORNPCCnLt";
+    }
+    
+    #learnmore-btn {
+        background: #fff none repeat scroll 0 0;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        color: #00677b;
+        display: inline-block;
+        font-family: "UniversNextforMORNPCCnBd";
+        font-size: 18px;
+        height: 36px;
+        line-height: 34px;
+        position: relative;
+        text-align: center;
+        transition: all 0.25s ease-in-out 0s;
+        width: 140px;
+        text-decoration: none;
+        margin-top: 6em;
+    }
+    
+    .canvasjs-chart-credit {
+        display: none !important;
+    }
+    
+    .chart-label-table {
+        display: table;
+    }
+    
+    .chart-label-row {
+        display: table-row;
+    }
+    
+    .chart-label-cell {
+        display: table-cell;
+        width: 50%;
+    }
+    
+    @media (max-width: 1200px) {
+        #learnmore-btn {
+            margin-top: 0;
+        }
+        #howcanwehelp,
+        #ourinvestmentprinciples,
+        #accessyourmoney,
+        #howdoiinvest,
+        #aboutmorningstar {
+            padding: 5em 0;
+        }
+        #howcanwehelp.vertical-center,
+        #ourinvestmentprinciples.vertical-center,
+        #accessyourmoney.vertical-center,
+        #howdoiinvest.vertical-center,
+        #aboutmorningstar.vertical-center {
+            height: auto;
+            width: auto;
+            font: inherit;
+        }
+        #howcanwehelp.vertical-center:before,
+        #ourinvestmentprinciples.vertical-center:before,
+        #accessyourmoney.vertical-center:before,
+        #howdoiinvest.vertical-center:before,
+        #aboutmorningstar.vertical-center:before {
+            /* create a full-height inline block pseudo=element */
+            content: " ";
+            display: block;
+            vertical-align: baseline;
+            /* vertical alignment of the inline element */
+            height: auto;
+        }
+        .vertical-center > .howcanwehelp-cont,
+        .vertical-center > .ourinvestmentprinciples-cont,
+        .vertical-center > .accessyourmoney-cont,
+        .vertical-center > .howdoiinvest-cont,
+        .vertical-center > .aboutmorningstar-cont {
+            max-width: auto;
+            display: block;
+            vertical-align: baseline;
+            font: inherit;
+        }
+        .barchart {
+            width: 100%;
+        }
+        .piechart {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .piechart {
+            width: auto;
+        }
+         #insightsrego img {
+            width: 80%;
+        }
+
+        .form-group {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    
+    .circular-border {
+        border: 1px solid #fff;
+        border-radius: 10px;
+    }
+    
+    #scroll-nav {
+        width: 100%;
+        position: absolute;
+        bottom: 0em;
+    }
+    
+    #scroll-btn {
+        font-family: "UniversNextforMORNPCCnBd";
+        font-size: 16px;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .btn-default,
+    .btn-default:hover {
+        background-color: transparent !important;
+        border-color: #333;
+    }
+    
+    .btn {
+        border-radius: 20px;
+        font-size: 18px;
+        padding: 0.5em 1.5em;
+        font-family: "UniversNextforMORNPCCnBd";
+    }
+    
+    .lity-inline .lity-container {
+        background-color: #fff;
+    }
